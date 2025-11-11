@@ -1,0 +1,32 @@
+{
+  "source_url": "https://thuvienphapluat.vn/van-ban/Cong-nghe-thong-tin/Nghi-dinh-165-2025-ND-CP-huong-dan-Luat-Du-lieu-663547.aspx",
+  "meta": {
+    "Tiêu đề": "Nghị định 165/2025/NĐ-CP hướng dẫn Luật Dữ liệu",
+    "Số hiệu": "165/2025/NĐ-CP",
+    "Loại văn bản": "Nghị định",
+    "Lĩnh vực, ngành": "Công nghệ thông tin",
+    "Nơi ban hành": "Chính phủ",
+    "Người ký": "Nguyễn Chí Dũng",
+    "Ngày ban hành": "30/06/2025",
+    "Ngày hiệu lực": "Đã biết",
+    "Ngày đăng": "17/07/2025",
+    "Số công báo": "Từ số 909 đến số 910",
+    "Tình trạng": "Đã biết",
+    "Tóm tắt văn bản": "Quy định về xác định và quản lý rủi ro phát sinh trong xử lý dữ liệu từ 01/7/2025 Ngày 30/6/2025, Chính phủ vừa ban hành Nghị định 165/2025/NĐ-CP hướng dẫn Luật Dữ liệu có hiệu lực từ 01/7/2025, trong đó có quy định về xác định và quản lý rủi ro phát sinh trong xử lý dữ liệu.Quy định về xác định và quản lý rủi ro phát sinh trong xử lý dữ liệu từ 01/7/2025 Theo đó, các loại rủi ro phát sinh trong xử lý dữ liệu bao gồm: - Rủi ro quyền riêng tư xảy ra do không tuân thủ quy định của pháp luật về quyền riêng tư của chủ thể dữ liệu trong quá trình xử lý và chuyển dữ liệu. - Rủi ro an ninh mạng xảy ra do không áp dụng các biện pháp cần thiết để bảo vệ dữ liệu không được công khai khỏi những truy cập trái phép từ các đối tượng bên ngoài hoặc dữ liệu bị rò rỉ ra bên ngoài. - Rủi ro nhận dạng và quản lý truy cập xảy ra do không bảo đảm việc bảo vệ dữ liệu không được công khai khỏi những truy cập trái phép. - Rủi ro khác trong xử lý dữ liệu bao gồm: rủi ro chia sẻ dữ liệu xảy ra khi không có khả năng duy trì quyền kiểm soát đối với dữ liệu đã chia sẻ; rủi ro quản lý dữ liệu xảy ra do chất lượng của dữ liệu không đảm bảo. Một số biện pháp phòng ngừa rủi ro phát sinh trong xử lý dữ liệu bao gồm: - Thực hiện sao lưu dữ liệu thường xuyên và bảo đảm an toàn. - Định kỳ bảo trì, bảo dưỡng, nâng cấp hệ thống nhằm duy trì và cải thiện hiệu suất, tính năng, tính bảo mật và tính nhất quán của hệ thống cơ sở dữ liệu; có biện pháp ứng phó khôi phục hệ thống để bảo đảm tính liên tục của hệ thống. - Thực hiện các biện pháp bảo vệ dữ liệu theo quy định. - Phân cấp chặt chẽ quyền truy cập đối với từng loại dữ liệu để phòng ngừa việc truy cập dữ liệu trái phép. - Sử dụng các hệ thống giám sát và phát hiện xâm nhập để theo dõi hoạt động mạng và phát hiện các hành vi bất thường hoặc truy cập trái phép. - Cài đặt và duy trì các phần mềm bảo mật. - Thực hiện đánh giá rủi ro định kỳ hàng năm để xác định các lỗ hổng trong hệ thống và áp dụng các biện pháp phòng ngừa rủi ro tương ứng. - Xây dựng phương án, kế hoạch xử lý sự cố để chủ động, kịp thời ứng phó, khắc phục sự cố. - Đào tạo, bồi dưỡng, tập huấn kỹ năng bảo vệ dữ liệu, cách nhận biết các mối đe dọa, cách xử lý khi phát hiện rủi ro bảo mật; thường xuyên diễn tập phòng ngừa sự cố, giám sát, phát hiện, bảo đảm kịp thời ứng phó, khắc phục sự cố. - Các biện pháp khác theo quy định pháp luật. Xem chi tiết tại Nghị định 165/2025/NĐ-CP có hiệu lực từ 01/7/2025."
+  },
+  "relations_sections": {
+    "guidedDocument | Văn bản được hướng dẫn -": [],
+    "DuocHopNhatDocument | Văn bản được hợp nhất -": [],
+    "amendedDocument | Văn bản bị sửa đổi bổ sung -": [],
+    "correctedDocument | Văn bản bị đính chính -": [],
+    "replacedDocument | Văn bản bị thay thế -": [],
+    "referentialDocument | Văn bản được dẫn chiếu -": [],
+    "basisDocument | Văn bản được căn cứ -": [],
+    "guideDocument | Văn bản hướng dẫn -": [],
+    "HopNhatDocument | Văn bản hợp nhất -": [],
+    "amendDocument | Văn bản sửa đổi bổ sung -": [],
+    "correctingDocument | Văn bản đính chính -": [],
+    "replaceDocument | Văn bản thay thế -": []
+  },
+  "content_connection": []
+}

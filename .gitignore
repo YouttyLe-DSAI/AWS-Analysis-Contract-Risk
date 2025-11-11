@@ -1,0 +1,11 @@
+# Bỏ qua tất cả file trong thư mục processed
+out_luocdo/processed/
+
+# Hoặc, chỉ bỏ qua file cụ thể đó
+# out_luocdo/processed/chunks_clean_unicode.jsonl
+
+# Thêm các file/thư mục AI/Python phổ biến
+__pycache__/
+*.env
+*.log
+data/
