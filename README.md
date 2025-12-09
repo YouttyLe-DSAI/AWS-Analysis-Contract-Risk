@@ -23,7 +23,15 @@ Dự án sử dụng các dịch vụ AWS cốt lõi:
 *   **Database:** Amazon DynamoDB (Lưu User, Chat Session).
 *   **Storage & Vector:** Amazon S3 (Lưu file, Vector Embeddings).
 *   **AI Engine:** Amazon Bedrock (Claude 3 Haiku/Sonnet).
+  ![Architecture](/TEEJ---AGREEME/1.png)
 
+## 🎥 Demo Ứng dụng
+
+Xem video giới thiệu chi tiết về cách hoạt động của AGREEME - Smart Contract Assistant:
+
+[![AGREEME Demo](https://img.youtube.com/vi/THAY_ID_VIDEO_VAO_DAY/maxresdefault.jpg)](https://www.youtube.com/watch?v=THAY_ID_VIDEO_VAO_DAY)
+
+> *Bấm vào hình trên để xem video demo.*
 ## 🚀 Hướng dẫn Cài đặt & Triển khai (Cho Developer)
 
 ### Yêu cầu
