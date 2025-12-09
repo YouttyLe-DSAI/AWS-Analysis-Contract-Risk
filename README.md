@@ -29,8 +29,7 @@ Dự án sử dụng các dịch vụ AWS cốt lõi:
 
 Xem video giới thiệu chi tiết về cách hoạt động của AGREEME - Smart Contract Assistant:
 
-[![AGREEME Demo](https://www.youtube.com/watch?v=r7IIugBSSsY/maxresdefault.jpg)](https://www.youtube.com/watch?v=r7IIugBSSsY)
-
+[![AGREEME Demo](https://img.youtube.com/vi/r7IIugBSSsY/maxresdefault.jpg)](https://www.youtube.com/watch?v=r7IIugBSSsY)
 > *Bấm vào hình trên để xem video demo.*
 ## 🚀 Hướng dẫn Cài đặt & Triển khai (Cho Developer)
 
@@ -42,7 +41,7 @@ Xem video giới thiệu chi tiết về cách hoạt động của AGREEME - Sm
 ### Các bước triển khai
 1.  **Clone Repository:**
     ```bash
-    git clone https://github.com/nhatm2400/TEEJ---AGREEME.git
+    git clone https://github.com/YouttyLe-DSAI/AWS-Analysis-Contract-Risk.git
     cd contract-demo
     ```
 2.  **Triển khai Cơ sở hạ tầng:**
@@ -100,15 +99,15 @@ Dự án này được thực hiện và phát triển bởi:
 |---|---|---|
 | **Trần Thị Minh Anh** | Project Lead / Frontend | https://github.com/manh-25 |
 | **Nguyễn Minh Nhật** | Backend Developer / AI Engineer | https://github.com/nhatm2400 |
+| **Lê Minh Tuấn** | Data Engineer / Frontend / AI Engineer  | https://github.com/YouttyLe-DSAI |
 | **Nguyễn Trí Dũng** | AI Engineer | https://github.com/Lan0-NTD |
-| **Lê Minh Tuấn** | Data Engineer / Frontend | https://github.com/YouttyLe-DSAI |
 
 
 ---
 
 ## ⚠️ Lưu ý quan trọng
 *   Đây là dự án **Proof of Concept (PoC)** phục vụ mục đích học tập và demo công nghệ.
-*   Các tư vấn từ AI chỉ mang tính chất tham khảo, **không thay thế** tư vấn pháp lý chuyên nghiệp từ luật sư.
+*   Các tư vấn từ AI chỉ mang tính chất tham khảo.
 *   Đảm bảo bạn đã tắt/xóa tài nguyên AWS sau khi trải nghiệm để tránh phát sinh chi phí không mong muốn.
 
 ## 🤝 Đóng góp
