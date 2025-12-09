@@ -1,0 +1,27 @@
+# 1. Node.js (Thư viện)
+node_modules/
+
+# 2. Serverless Framework (File zip build nặng - QUAN TRỌNG)
+.serverless/
+
+# 3. Python (Cache & Môi trường ảo)
+__pycache__/
+*.pyc
+venv/
+env/
+
+# 4. File môi trường (Chứa key thật - QUAN TRỌNG)
+.env
+.env.production
+.env.test
+
+# Giữ lại file ví dụ
+!.env.example
+
+# 5. Rác hệ thống & Logs
+.DS_Store
+Thumbs.db
+npm-debug.log*
+logs/
+.vscode/
+.idea/

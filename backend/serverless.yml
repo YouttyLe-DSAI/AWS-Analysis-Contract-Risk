@@ -1,0 +1,128 @@
+service: ai-contract-backend
+
+custom:
+  secrets: ${file(./fetchSecrets.js)}
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  stage: dev
+  region: ap-southeast-1
+  architecture: x86_64
+  timeout: 29
+  memorySize: 512
+
+  httpApi:
+    cors: true
+  
+  environment:
+    NODE_ENV: production
+    S3_BUCKET_RAW: #your s3 bucket for raw contracts
+    DYNAMO_TABLE_USERS: Users
+    DYNAMO_TABLE_SESSIONS: ChatSessions
+    DYNAMO_TABLE_MESSAGES: ChatMessages
+    
+ 
+    COGNITO_USER_POOL_ID: !Ref CognitoUserPoolMyUserPool
+    COGNITO_CLIENT_ID: !Ref CognitoUserPoolClient
+
+    LAMBDA_RETRIEVAL_ARN: ${self:custom.secrets.LAMBDA_RETRIEVAL_ARN}
+    LAMBDA_REVIEW_ARN: ${self:custom.secrets.LAMBDA_REVIEW_ARN}
+    LAMBDA_GENERATE_ARN: ${self:custom.secrets.LAMBDA_GENERATE_ARN}
+
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - dynamodb:Query
+            - dynamodb:Scan
+            - dynamodb:GetItem
+            - dynamodb:PutItem
+            - dynamodb:UpdateItem
+            - dynamodb:DeleteItem
+          Resource: "arn:aws:dynamodb:ap-southeast-1:*:table/*"
+
+        - Effect: Allow
+          Action:
+            - logs:CreateLogGroup
+            - logs:CreateLogStream
+            - logs:PutLogEvents
+          Resource: "*"  
+          
+        - Effect: Allow
+          Action:
+            - bedrock:InvokeModel
+          Resource: "*" 
+
+        - Effect: Allow
+          Action:
+            - s3:PutObject
+            - s3:GetObject
+            - s3:ListBucket
+          Resource: 
+            - "arn:aws:s3:::#your s3 bucket name"      
+            - "arn:aws:s3:::#your s3 bucket name*"
+        
+        - Effect: Allow
+          Action:
+            - lambda:InvokeFunction
+          Resource: "*"
+
+functions:
+  api:
+    handler: dist/server.handler
+    events:
+      - httpApi:
+          path: '*'
+          method: '*'
+      - schedule:
+          rate: rate(5 minutes)
+          input:
+            body: '{"keep_warm": true}'
+
+  postConfirmation:
+    handler: dist/triggers/postConfirmation.handler
+    events:
+      - cognitoUserPool:
+          pool: ${self:service}-user-pool-${self:provider.stage}
+          trigger: PostConfirmation
+          existing: true 
+
+resources:
+  Resources:
+    CognitoUserPoolMyUserPool:
+      Type: AWS::Cognito::UserPool
+      Properties:
+        UserPoolName: ${self:service}-user-pool-${self:provider.stage}
+        UsernameAttributes:
+          - email
+        AutoVerifiedAttributes:
+          - email
+        Policies:
+          PasswordPolicy:
+            MinimumLength: 8
+            RequireLowercase: true
+            RequireNumbers: true
+            RequireSymbols: false
+            RequireUppercase: true
+
+    CognitoUserPoolClient:
+      Type: AWS::Cognito::UserPoolClient
+      Properties:
+        ClientName: ${self:service}-client-${self:provider.stage}
+        UserPoolId:
+          Ref: CognitoUserPoolMyUserPool
+        GenerateSecret: false 
+        ExplicitAuthFlows:
+          - ALLOW_USER_SRP_AUTH
+          - ALLOW_REFRESH_TOKEN_AUTH
+          - ALLOW_USER_PASSWORD_AUTH
+
+package:
+  patterns:
+    - '!node_modules/.prisma/**'
+    - '!prisma/**'
+    - '!.git/**'
+    - '!src/**'
+    - '!.env'

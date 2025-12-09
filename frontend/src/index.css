@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Deep navy blue theme for contract assistant */
+    --background: 0 0% 100%;
+    --foreground: 230 60% 28%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 230 60% 28%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 230 60% 28%;
+
+    /* Primary: Deep navy blue (like Figma design) */
+    --primary: 230 60% 28%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 230 50% 40%;
+    
+    /* Accent: Bright blue for CTAs */
+    --secondary: 220 80% 60%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 20% 96%;
+    --muted-foreground: 230 20% 50%;
+
+    --accent: 220 80% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Risk levels for contract analysis */
+    --risk-safe: 160 84% 39%;
+    --risk-caution: 38 92% 50%;
+    --risk-danger: 0 72% 60%;
+
+    --destructive: 0 72% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 20% 90%;
+    --input: 220 20% 90%;
+    --ring: 220 80% 60%;
+
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(230 60% 28%), hsl(230 50% 40%));
+    --gradient-accent: linear-gradient(135deg, hsl(220 80% 60%), hsl(240 70% 65%));
+    
+    /* Shadows */
+    --shadow-card: 0 4px 20px -4px hsl(230 60% 28% / 0.15);
+    --shadow-hover: 0 8px 30px -6px hsl(230 60% 28% / 0.25);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 230 60% 28%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 220 80% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 230 50% 35%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 230 40% 35%;
+    --sidebar-ring: 220 80% 60%;
+  }
+
+  .dark {
+    --background: 230 50% 12%;
+    --foreground: 0 0% 98%;
+
+    --card: 230 45% 16%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 230 45% 16%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 220 80% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 220 70% 70%;
+
+    --secondary: 230 40% 25%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 230 40% 20%;
+    --muted-foreground: 220 20% 70%;
+
+    --accent: 220 80% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --risk-safe: 160 70% 45%;
+    --risk-caution: 38 80% 55%;
+    --risk-danger: 0 65% 65%;
+
+    --destructive: 0 65% 65%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 230 30% 25%;
+    --input: 230 30% 25%;
+    --ring: 220 80% 60%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(220 80% 60%), hsl(240 70% 65%));
+    --gradient-accent: linear-gradient(135deg, hsl(220 70% 70%), hsl(240 60% 75%));
+    
+    --shadow-card: 0 4px 20px -4px hsl(0 0% 0% / 0.4);
+    --shadow-hover: 0 8px 30px -6px hsl(0 0% 0% / 0.5);
+
+    --sidebar-background: 230 50% 12%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 220 80% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 230 40% 20%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 230 30% 25%;
+    --sidebar-ring: 220 80% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1; 
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #496DFF; 
+}
+
+
+span.react-pdf__Page__textContent,
+div.react-pdf__Page__textContent,
+.react-pdf__Page__textContent {
+    display: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+.react-pdf__Page__annotations {
+    display: none !important;
+}
+
+#react-doc-viewer, 
+#react-doc-viewer #proxy-renderer {
+    overflow-y: scroll !important; 
+    overflow-x: hidden !important; 
+    height: 100% !important;
+}
+
+.react-pdf__Document {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f3f4f6; 
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.react-pdf__Page {
+    min-width: unset !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    background-color: transparent !important;
+    margin-bottom: 20px !important; 
+}
+
+
+.react-pdf__Page canvas {
+    max-width: 95% !important; 
+    height: auto !important;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); 
+}
